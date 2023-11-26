@@ -4,4 +4,3 @@ from src.model.delivery import Delivery
 
 class DeliveryDao(GeneralDao):
     _domain_type = Delivery
-    

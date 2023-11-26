@@ -9,7 +9,6 @@ class Delivery(db.Model, IDto):
     price = db.Column(db.Float, nullable=False)
     delivery_type_type = db.Column(db.String(45), db.ForeignKey('DeliveryType.type'), nullable=False)
 
-    # Specify the join condition explicitly
     delivery_type = db.relationship('DeliveryType', backref='deliveries', lazy=True,
                                     primaryjoin='Delivery.delivery_type_type == DeliveryType.type')
 
