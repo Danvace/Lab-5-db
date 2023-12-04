@@ -14,6 +14,8 @@ class Order(db.Model, IDto):
     user = db.relationship('User', backref='orders', foreign_keys=[user_id])
     delivery = db.relationship('Delivery', backref='orders')
 
+    products = db.relationship('Product', secondary='order_has_product', backref='order')
+
     def __init__(self, date, user_id, delivery_id, price):
         self.date = date
         self.user_id = user_id

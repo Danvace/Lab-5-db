@@ -10,7 +10,9 @@ class Product(db.Model, IDto):
     description = db.Column(db.String(500), nullable=False)
     price = db.Column(db.Float, nullable=False)
     category_name = db.Column(db.String(45), db.ForeignKey('category.name'), nullable=False)
-    category = db.relationship('Category', backref='products')
+    category = db.relationship('Category', backref='category')
+
+    orders = db.relationship('Order', secondary='order_has_product', backref='products_in_order')
 
     def __init__(self, name, description, price, category_name):
         self.name = name

@@ -1,14 +1,9 @@
-
-
-# from basket import Basket
-# from basket_has_product import BasketHasProduct
-# from category import Category
+from src.model.category import Category
 from src.model.characteristic import Characteristic
-# from delivery import Delivery
-# from delivery_type import DeliveryType
-# from image import Image
-# from order import Order
-# from order_has_basket import OrderHasBasket
-# from product import Product
-# from review import Review
-# from user import User
+from src.model.delivery import Delivery
+from src.model.delivery_type import DeliveryType
+from src.model.order import Order
+from src.model.order_has_product import OrderHasProduct
+from src.model.product import Product
+from src.model.review import Review
+from src.model.user import User
