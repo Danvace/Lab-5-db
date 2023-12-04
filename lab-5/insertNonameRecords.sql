@@ -1,3 +1,4 @@
+# вставка 10 елементів noname в таблицю review
 DELIMITER //
 
 CREATE PROCEDURE InsertNonameRecords(IN product_id1 int)

@@ -12,7 +12,7 @@ DELIMITER ;
 
 call review_insert(5, 'This is a review');
 
-
+#параметризованна вставка в таблицю
 CREATE PROCEDURE InsertOrderProductMapping(IN order_id1 INT, IN product_id1 INT)
 BEGIN
     INSERT INTO order_has_product (order_id, product_id) VALUES (order_id1, product_id1);

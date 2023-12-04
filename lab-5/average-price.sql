@@ -1,3 +1,4 @@
+# середнє значення ціни
 DELIMITER //
 CREATE FUNCTION averagePrice()
     RETURNS DECIMAL(10, 2)
