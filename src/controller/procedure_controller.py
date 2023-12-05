@@ -86,3 +86,17 @@ def review_insert():
         db.session.close()
 
 
+@procedure_bp.post('/ProcCursor')
+def proc_cursor():
+    try:
+        sql = text('CALL ProcCurso()')
+        db.session.execute(sql)
+
+        db.session.commit()
+
+        return jsonify({'message': 'databases created successfully'})
+    except Exception as e:
+        db.session.rollback()
+        return jsonify({'error': str(e)})
+    finally:
+        db.session.close()
